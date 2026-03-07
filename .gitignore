@@ -9,3 +9,5 @@ cmake_install.cmake
 CMakeCache.txt
 Makefile
 *.jsonl
+build_check/
+build/
