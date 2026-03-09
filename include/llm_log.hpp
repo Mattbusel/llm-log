@@ -62,7 +62,8 @@ public:
         std::optional<bool>        success_only;
         size_t                     limit = 100;
     };
-    std::vector<LogEntry> query(const QueryOptions& opts = {});
+    std::vector<LogEntry> query();
+    std::vector<LogEntry> query(const QueryOptions& opts);
 
     struct Summary {
         size_t total_calls;
