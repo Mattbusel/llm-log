@@ -219,6 +219,8 @@ void Logger::ScopedCall::set_tokens(size_t in, size_t out) { entry_.input_tokens
 void Logger::ScopedCall::set_cost(double usd) { entry_.cost_usd = usd; }
 void Logger::ScopedCall::set_error(const std::string& err) { entry_.error = err; entry_.success = false; }
 
+std::vector<LogEntry> Logger::query() { return query(QueryOptions{}); }
+
 std::vector<LogEntry> Logger::query(const QueryOptions& opts) {
     std::vector<LogEntry> results;
     std::ifstream f(config_.filepath);
